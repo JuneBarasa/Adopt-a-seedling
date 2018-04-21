@@ -1,6 +1,6 @@
 function initMap() {
  var image = {
- url:" /home/cynthia/Adopt-a-seedling/images/trees.png",
+ url:"images/trees.png",
  size: new google.maps.Size(71, 71),
  origin: new google.maps.Point(0, 0),
  anchor: new google.maps.Point(17, 34),
@@ -19,7 +19,20 @@ function initMap() {
    icon:image,
    map: map
 
+
  });
+
+marker.addListener('click', toggleBounce);
+
+//Animation for Marker
+function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      }
+
 
  google.maps.event.addListener(map, 'click', function(event) {
     placeMarker(event.latLng);
