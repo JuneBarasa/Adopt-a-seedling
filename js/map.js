@@ -1,6 +1,6 @@
 function initMap() {
  var image = {
- url:" /Adopt-a-seedling/images/trees.png",
+ url:" /home/cynthia/Adopt-a-seedling/images/trees.png",
  size: new google.maps.Size(71, 71),
  origin: new google.maps.Point(0, 0),
  anchor: new google.maps.Point(17, 34),
